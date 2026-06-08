@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script extracts IP addresses and status codes from apache-access.log using awk
+
+awk '{print $1, $9}' apache-access.log
