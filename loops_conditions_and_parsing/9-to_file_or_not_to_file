@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script analyzes a file path passed as an argument and prints its traits
 
-if [ $# -get 0 ]; then
+if [ $# -eq 0 ]; then
     filename="school"
 else
     filename=$1
