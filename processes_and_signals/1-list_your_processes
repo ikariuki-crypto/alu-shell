@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# This script lists all running processes in a user-oriented format with hierachy 
-
-ps auxf | grep -v "bash -c"
+# Displays a user-oriented list of all running processes in a hierarchy
+ps auxf
