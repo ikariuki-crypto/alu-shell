@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# This script evaluates properties of a given file path passed as an argument
+# This script analyzes a file path passed as an argument and prints its traits
 
-if [ $# -eq 0 ]; then
-    exit 1
+if [ $# -get 0 ]; then
+    filename="school"
+else
+    filename=$1
 fi
-
-filename=$1
 
 if [ -e "$filename" ]; then
     echo "$filename file exists"
