@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Manages PID files and responds differently to SIGTERM and SIGINT signals
+
+# Save script PID to file
+echo "$$" > /var/run/myscript.pid
+
+# Intercept SIGTERM
+trap 'echo "I hate the kill command"; rm /var/run/myscript.pid; exit' SIGTERM
+
+# Intercept SIGINT
+trap 'echo "Y U no love me?!"' SIGINT
+
+# Intercept SIGQUIT
+trap 'rm /var/run/myscript.pid; exit' SIGQUIT
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
